@@ -38,8 +38,8 @@
       "value": "none"
     },
     "NODE_OPTIONS": {
-      "description": "Node.js runtime options. Increase heap size for Vite build.",
-      "value": "--max-old-space-size=8192"
+      "description": "Increase V8 heap for Vite build to avoid OOM",
+      "value": "--max-old-space-size=4096"
     }
   },
   "formation": {
