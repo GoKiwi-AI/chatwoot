@@ -1,17 +1,17 @@
-<p>Hello,</p>
+<p>Ciao,</p>
 
-<p>Your contact import has been completed. Please check the contacts tab to view the imported contacts.</p>
+<p>L’importazione dei tuoi contatti è stata completata. Puoi visualizzare i contatti importati nella scheda dedicata ai contatti.</p>
 
-<p>Number of records imported: {{meta['imported_contacts']}}</p>
+<p>Numero di record importati: {{meta['imported_contacts']}}</p>
 
-<p>Number of records failed: {{meta['failed_contacts']}}</p>
+<p>Numero di record non importati: {{meta['failed_contacts']}}</p>
 
 {% if meta['failed_contacts'] == 0 %}
   <p>
-    Click <a href="{{action_url}}">here</a> to view the imported contacts.
+    Clicca <a href="{{action_url}}">qui</a> per visualizzare i contatti importati.
   </p>
 {% else %}
   <p>
-  Click <a href="{{ action_url }}" target="_blank">here</a> to view failed records.
+    Clicca <a href="{{ action_url }}" target="_blank">qui</a> per visualizzare i record non importati.
   </p>
 {% endif %}

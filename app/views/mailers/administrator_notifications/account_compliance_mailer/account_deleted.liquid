@@ -1,30 +1,30 @@
-<p>Hello,</p>
+<p>Ciao,</p>
 
-<p>This is a notification to inform you that an account has been permanently deleted from your Chatwoot instance.</p>
+<p>Questa è una notifica per informarti che un account è stato eliminato in modo permanente dalla tua istanza di Omni.</p>
 
 <p>
-  <strong>Chatwoot Installation:</strong> {{ meta.instance_url }}<br>
-  <strong>Account ID:</strong> {{ meta.account_id }}<br>
-  <strong>Account Name:</strong> {{ meta.account_name }}<br>
-  <strong>Deletion due at:</strong> {{ meta.marked_for_deletion_at }}<br>
-  <strong>Deleted At:</strong> {{ meta.deleted_at }}<br>
-  <strong>Deletion Reason:</strong> {{ meta.deletion_reason }}
+  <strong>Installazione Omni:</strong> {{ meta.instance_url }}<br>
+  <strong>ID Account:</strong> {{ meta.account_id }}<br>
+  <strong>Nome Account:</strong> {{ meta.account_name }}<br>
+  <strong>Data prevista per l’eliminazione:</strong> {{ meta.marked_for_deletion_at }}<br>
+  <strong>Eliminato il:</strong> {{ meta.deleted_at }}<br>
+  <strong>Motivo dell’eliminazione:</strong> {{ meta.deletion_reason }}
 </p>
 
 {% if meta.deleted_user_count > 0 %}
 <p>
-  <strong>Deleted Users ({{ meta.deleted_user_count }}):</strong><br>
+  <strong>Utenti eliminati ({{ meta.deleted_user_count }}):</strong><br>
   {% for user in meta.soft_deleted_users %}
-    User ID: {{ user.user_id }}, Email: {{ user.user_email }}{% unless forloop.last %}<br>{% endunless %}
+    ID Utente: {{ user.user_id }}, Email: {{ user.user_email }}{% unless forloop.last %}<br>{% endunless %}
   {% endfor %}
 </p>
 {% else %}
 <p>
-  <strong>Deleted Users:</strong> None
+  <strong>Utenti eliminati:</strong> Nessuno
 </p>
 {% endif %}
 
-<p>This email serves as a record for compliance purposes.</p>
+<p>Questa email funge da registrazione a fini di conformità.</p>
 
-<p>Thank you,<br>
-Chatwoot System</p>
+<p>Grazie,<br>
+Sistema Omni</p>
