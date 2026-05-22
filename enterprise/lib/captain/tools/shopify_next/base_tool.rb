@@ -66,7 +66,9 @@ class Captain::Tools::ShopifyNext::BaseTool < Captain::Tools::BasePublicTool
   end
 
   def preferred_cart_identifier(cart_id, cart_token)
-    [cart_id, cart_token].compact_blank.find { |identifier| identifier.include?('?key=') }
+    identifiers = [cart_id, cart_token].compact_blank
+
+    identifiers.find { |identifier| identifier.include?('?key=') } || identifiers.first
   end
 
   def context_cart_snapshot(state)
