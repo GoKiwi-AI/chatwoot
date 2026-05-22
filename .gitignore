@@ -104,3 +104,7 @@ CLAUDE.local.md
 .pnpm-store/*
 local/
 Procfile.worktree
+
+# Local change docs
+/docs/qudot-communications-functional-spec.md
+/docs/qudot-modules-overview.md
