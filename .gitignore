@@ -103,4 +103,5 @@ CLAUDE.local.md
 .histoire
 .pnpm-store/*
 local/
+docs/
 Procfile.worktree
